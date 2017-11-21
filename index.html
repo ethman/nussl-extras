@@ -11,7 +11,11 @@
 <ul>
     <li>Audio:
         <ul>
-            <li><a href="/audio/dev1_female3_inst_mix.wav">dev1_female3_inst_mix.wav</a></li>
+            {% for file in site.static_files %}
+                {% if file.path contains 'audio' %}
+                    <li><a href="{{ site.baseurl }}{{ file.path }}">dev1_female3_inst_mix.wav</a></li>
+                {% endif %}
+            {% endfor %}
         </ul>
     </li>
 
