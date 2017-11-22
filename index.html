@@ -8,22 +8,22 @@
 
 <h1>NUSSL extras</h1>
 
-<ul>
-    <li>Audio:
+<ul id="full-list">
+    <li id="audio-list">Audio:
         <ul>
             {% for file in site.static_files %}
                 {% if file.path contains 'audio' %}
-                    <li><a href="{{ site.baseurl }}{{ file.path }}">dev1_female3_inst_mix.wav</a></li>
+                    <li><a href="{{ site.baseurl }}{{ file.path }}">{{</a></li>
                 {% endif %}
             {% endfor %}
         </ul>
     </li>
 
-    <li>Benchmarks:
+    <li id="benchmark-list">Benchmarks:
 
     </li>
 
-    <li>Models:
+    <li id="model-list">Models:
 
     </li>
 </ul>
