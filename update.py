@@ -43,6 +43,15 @@ def main():
 
     model_metadata = update_metadata_file(model_json, model_dir, model_ext, model_metadata_key, model_metadata_reqs)
 
+    # ---------- Update index.html ----------
+    audio_names_paths = {a['file_name']: os.path.join('/assets', 'audio', a['file_name'])
+                         for a in audio_metadata[audio_metadata_key]}
+    benchmark_names_paths = {a['file_name']: os.path.join('/assets', 'benchmarks', a['file_name'])
+                             for a in benchmark_metadata[benchmark_metadata_key]}
+    model_names_paths = {a['file_name']: os.path.join('/assets', 'models', a['file_name'])
+                         for a in model_metadata[model_metadata_key]}
+    update_html(audio_names_paths, benchmark_names_paths, model_names_paths)
+
 
 # -------------------------------------------------
 #               HELPER FUNCTIONS
@@ -142,18 +151,28 @@ def update_metadata_file(metadata_file, assets_folder, allowed_exts, metadata_ke
 
 def update_html(audio_files, benchmark_files, model_files):
 
-    with open('index.html', 'r+') as f:
-        txt = f.read()
-        soup = bs4.BeautifulSoup(txt)
+    with open('index.html', 'r') as index_html:
+        soup = bs4.BeautifulSoup(index_html.read(), 'lxml')
 
-        l = [('audio-list', audio_files), ('benchmark-list', benchmark_files), ('model-list', model_files)]
-        for id, file_list in l:
-            ul = soup.find('li', {'id': id})
-            for f in file_list:
-                li = soup.new_tag('li')
-                li = '<li><a href="{}">{}</a></li>'.format(f, f)
-                ul.append(li)
+    l = [('audio-list', audio_files), ('benchmark-list', benchmark_files), ('model-list', model_files)]
+    for id, file_list in l:
+        # Get the <li> for the relevant list then the inner <ul>
+        outer_li = soup.find('li', {'id': id})
+        ul = outer_li.find('ul')
 
+        # Remove everything already in the <ul>
+        [li.extract() for li in ul.findChildren()]
+
+        # Populate the <ul> with new tags
+        for fn, loc in file_list.items():
+            li = soup.new_tag('li')
+            a = soup.new_tag('a', href=loc)
+            a.string = fn
+            li.append(a)
+            ul.append(li)
+
+    with open('index.html', 'w') as index_html:
+        index_html.write(soup.prettify())
 
 if __name__ == '__main__':
     main()

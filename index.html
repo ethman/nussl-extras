@@ -1,32 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>nussl Extras</title>
-</head>
-<body>
-
-<h1>NUSSL extras</h1>
-
-<ul id="full-list">
-    <li id="audio-list">Audio:
-        <ul>
-            {% for file in site.static_files %}
-                {% if file.path contains 'audio' %}
-                    <li><a href="{{ site.baseurl }}{{ file.path }}">{{</a></li>
-                {% endif %}
-            {% endfor %}
-        </ul>
-    </li>
-
-    <li id="benchmark-list">Benchmarks:
-
-    </li>
-
-    <li id="model-list">Models:
-
-    </li>
-</ul>
-
-</body>
+ <head>
+  <meta charset="utf-8"/>
+  <title>
+   nussl Extras
+  </title>
+ </head>
+ <body>
+  <h1>
+   NUSSL extras
+  </h1>
+  <ul id="full-list">
+   <li id="audio-list">
+    Audio:
+    <ul>
+     <li>
+      <a href="/assets/audio/dev1_female3_synthconv_130ms_5cm_mix.wav">
+       dev1_female3_synthconv_130ms_5cm_mix.wav
+      </a>
+     </li>
+     <li>
+      <a href="/assets/audio/dev1_female3_inst_mix.wav">
+       dev1_female3_inst_mix.wav
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li id="benchmark-list">
+    Benchmarks:
+    <ul>
+    </ul>
+   </li>
+   <li id="model-list">
+    Models:
+    <ul>
+    </ul>
+   </li>
+  </ul>
+ </body>
 </html>
