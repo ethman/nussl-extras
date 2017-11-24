@@ -44,11 +44,11 @@ def main():
     model_metadata = update_metadata_file(model_json, model_dir, model_ext, model_metadata_key, model_metadata_reqs)
 
     # ---------- Update index.html ----------
-    audio_names_paths = {a['file_name']: os.path.join('/nussl-extra/assets', 'audio', a['file_name'])
+    audio_names_paths = {a['file_name']: os.path.join('/nussl-extras/assets', 'audio', a['file_name'])
                          for a in audio_metadata[audio_metadata_key]}
-    benchmark_names_paths = {a['file_name']: os.path.join('/nussl-extra/assets', 'benchmarks', a['file_name'])
+    benchmark_names_paths = {a['file_name']: os.path.join('/nussl-extras/assets', 'benchmarks', a['file_name'])
                              for a in benchmark_metadata[benchmark_metadata_key]}
-    model_names_paths = {a['file_name']: os.path.join('/nussl-extra/assets', 'models', a['file_name'])
+    model_names_paths = {a['file_name']: os.path.join('/nussl-extras/assets', 'models', a['file_name'])
                          for a in model_metadata[model_metadata_key]}
     update_html(audio_names_paths, benchmark_names_paths, model_names_paths)
 
