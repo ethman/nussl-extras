@@ -2,10 +2,10 @@
   "last_updated": "2017-11-27", 
   "nussl Audio File metadata": [
     {
-      "audio_attributes": "DUET, Speech",
+      "audio_attributes": "DUET, Speech", 
       "date_added": "2017-11-22", 
       "date_modified": "2017-11-22", 
-      "file_description": "Instantaneous mixture of three female speakers talking in a stereo field.",
+      "file_description": "Instantaneous mixture of three female speakers talking in a stereo field.", 
       "file_hash": "dbd9a2b633bd0ac757dd9edf0c8cd0fe678defaa51ca97927669bc3d91aeca03", 
       "file_length_seconds": 10.0, 
       "file_name": "dev1_female3_inst_mix.wav", 
@@ -13,15 +13,37 @@
       "file_size_bytes": 1764044
     }, 
     {
-      "audio_attributes": "DUET, Speech",
+      "audio_attributes": "DUET, Speech", 
       "date_added": "2017-11-22", 
       "date_modified": "2017-11-22", 
-      "file_description": "Three female speakers talking in a stereo field, with 130ms of inter-channel delay.",
+      "file_description": "Three female speakers talking in a stereo field, with 130ms of inter-channel delay.", 
       "file_hash": "9514218e0c526725447b6f2bd0ee4ae32ee03db97e8ecb9b566aa4038ce27548", 
       "file_length_seconds": 10.0, 
       "file_name": "dev1_female3_synthconv_130ms_5cm_mix.wav", 
       "file_size": "1.7MiB", 
       "file_size_bytes": 1764044
+    }, 
+    {
+      "audio_attributes": "Piano, middle C",
+      "date_added": "2017-11-27", 
+      "date_modified": "2017-11-27", 
+      "file_description": "Acoustic piano playing middle C.",
+      "file_hash": "f0d8d3c8d199d3790b0e42d1e5df50a6801f928d10f533149ed0babe61b5d7b5", 
+      "file_length_seconds": 5.00390022675737, 
+      "file_name": "K0140.wav", 
+      "file_size": "431.0KiB", 
+      "file_size_bytes": 441388
+    }, 
+    {
+      "audio_attributes": "Piano, A440",
+      "date_added": "2017-11-27", 
+      "date_modified": "2017-11-27", 
+      "file_description": "Acoustic piano playing the A above middle C. (A440)",
+      "file_hash": "82eb0378e2732f302af7ef057a6aa09dc6e8ec4aa8f79e7c47a4dd5a31913ae9", 
+      "file_length_seconds": 4.992290249433107, 
+      "file_name": "K0149.wav", 
+      "file_size": "430.0KiB", 
+      "file_size_bytes": 440364
     }
   ]
 }

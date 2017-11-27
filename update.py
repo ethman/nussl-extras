@@ -123,7 +123,11 @@ def update_metadata_file(metadata_file, assets_folder, allowed_exts, metadata_ke
     for file_ in new_files:
         path = os.path.join(assets_folder, file_)
         new_entry = {'file_name': file_}
-        _ = [new_entry.update({field: func(path)}) for field, func in metadata_reqs_dict.items()]
+
+        for field, func in metadata_reqs_dict.items():
+            if callable(func):
+                new_entry.update({field: func(path)})
+
         metadata_dict.append(new_entry)
 
     # Check existing metadata for errors
