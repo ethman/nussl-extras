@@ -19,7 +19,8 @@ def main():
     audio_metadata_key = 'nussl Audio File metadata'
     audio_metadata_reqs = {'file_description': None, 'audio_attributes': None,
                            'file_length_seconds': _audio_length_sec, 'date_added': _cur_date,
-                           'date_modified': _cur_date, 'file_size_bytes': os.path.getsize, 'file_hash': _hash_file}
+                           'date_modified': _cur_date, 'file_size_bytes': os.path.getsize,
+                           'file_size': _human_readable_file_size, 'file_hash': _hash_file}
 
     audio_metadata = update_metadata_file(audio_json, audio_dir, audio_ext, audio_metadata_key, audio_metadata_reqs)
 
@@ -65,6 +66,16 @@ def _audio_length_sec(file_path):
 
 def _cur_date(file_path=None):
     return datetime.datetime.now().strftime('%Y-%m-%d')
+
+
+def _human_readable_file_size(file_path, suffix='B'):
+    num = os.path.getsize(file_path)
+
+    for unit in ['', 'Ki', 'Mi', 'Gi', 'Ti', 'Pi', 'Ei', 'Zi']:
+        if abs(num) < 1024.0:
+            return "%3.1f%s%s" % (num, unit, suffix)
+        num /= 1024.0
+    return "%.1f%s%s" % (num, 'Yi', suffix)
 
 
 def _hash_file(file_path, chunk_size=65535):
@@ -150,6 +161,7 @@ def update_metadata_file(metadata_file, assets_folder, allowed_exts, metadata_ke
 #            HTML UPDATE FUNCTION
 # -------------------------------------------------
 
+
 def update_html(audio_files, benchmark_files, model_files):
 
     with open('index.html', 'r') as index_html:
@@ -174,6 +186,7 @@ def update_html(audio_files, benchmark_files, model_files):
 
     with open('index.html', 'w') as index_html:
         index_html.write(soup.prettify())
+
 
 if __name__ == '__main__':
     main()

@@ -1,24 +1,26 @@
 {
-  "last_updated": "2017-11-24", 
+  "last_updated": "2017-11-27", 
   "nussl Audio File metadata": [
     {
-      "audio_attributes": "", 
+      "audio_attributes": "DUET, Speech",
       "date_added": "2017-11-22", 
       "date_modified": "2017-11-22", 
-      "file_description": "Three female speakers talking in a stereo field", 
+      "file_description": "Instantaneous mixture of three female speakers talking in a stereo field.",
       "file_hash": "dbd9a2b633bd0ac757dd9edf0c8cd0fe678defaa51ca97927669bc3d91aeca03", 
       "file_length_seconds": 10.0, 
       "file_name": "dev1_female3_inst_mix.wav", 
+      "file_size": "1.7MiB", 
       "file_size_bytes": 1764044
     }, 
     {
-      "audio_attributes": "", 
+      "audio_attributes": "DUET, Speech",
       "date_added": "2017-11-22", 
       "date_modified": "2017-11-22", 
-      "file_description": "", 
+      "file_description": "Three female speakers talking in a stereo field, with 130ms of inter-channel delay.",
       "file_hash": "9514218e0c526725447b6f2bd0ee4ae32ee03db97e8ecb9b566aa4038ce27548", 
       "file_length_seconds": 10.0, 
       "file_name": "dev1_female3_synthconv_130ms_5cm_mix.wav", 
+      "file_size": "1.7MiB", 
       "file_size_bytes": 1764044
     }
   ]
