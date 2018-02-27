@@ -1,4 +1,14 @@
 {
-  "last_updated": "2017-11-27", 
-  "nussl Models metadata": []
+  "last_updated": "2018-02-27", 
+  "nussl Models metadata": [
+    {
+      "date_added": "2018-02-27", 
+      "date_modified": "2018-02-27", 
+      "file_description": "example Deep Clustering Keras model",
+      "file_hash": "a75505eececaeaf6d1d62e4b0862e51d5c184945ea64f99b1d59de8b8a6bc2c8", 
+      "file_name": "deep_clustering_model.h5", 
+      "file_size": "48.1MiB", 
+      "file_size_bytes": 50396532
+    }
+  ]
 }

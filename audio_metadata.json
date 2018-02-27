@@ -1,5 +1,5 @@
 {
-  "last_updated": "2017-11-27", 
+  "last_updated": "2018-02-27", 
   "nussl Audio File metadata": [
     {
       "audio_attributes": "DUET, Speech", 
@@ -24,10 +24,10 @@
       "file_size_bytes": 1764044
     }, 
     {
-      "audio_attributes": "Piano, middle C",
+      "audio_attributes": "Piano, middle C", 
       "date_added": "2017-11-27", 
       "date_modified": "2017-11-27", 
-      "file_description": "Acoustic piano playing middle C.",
+      "file_description": "Acoustic piano playing middle C.", 
       "file_hash": "f0d8d3c8d199d3790b0e42d1e5df50a6801f928d10f533149ed0babe61b5d7b5", 
       "file_length_seconds": 5.00390022675737, 
       "file_name": "K0140.wav", 
@@ -35,10 +35,10 @@
       "file_size_bytes": 441388
     }, 
     {
-      "audio_attributes": "Piano, A440",
+      "audio_attributes": "Piano, A440", 
       "date_added": "2017-11-27", 
       "date_modified": "2017-11-27", 
-      "file_description": "Acoustic piano playing the A above middle C. (A440)",
+      "file_description": "Acoustic piano playing the A above middle C. (A440)", 
       "file_hash": "82eb0378e2732f302af7ef057a6aa09dc6e8ec4aa8f79e7c47a4dd5a31913ae9", 
       "file_length_seconds": 4.992290249433107, 
       "file_name": "K0149.wav", 

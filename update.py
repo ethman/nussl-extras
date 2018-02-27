@@ -38,9 +38,11 @@ def main():
     # ---------- Models ----------
     model_json = 'model_metadata.json'
     model_dir = os.path.join('assets', 'models')
-    model_ext = []
+    model_ext = ['h5', 'hdf5']
     model_metadata_key = 'nussl Models metadata'
-    model_metadata_reqs = {'file_description': None, 'date_added': _cur_date, 'date_modified': _cur_date, }
+    model_metadata_reqs = {'file_description': None, 'date_added': _cur_date, 'date_modified': _cur_date,
+                           'file_size_bytes': os.path.getsize,
+                           'file_size': _human_readable_file_size, 'file_hash': _hash_file}
 
     model_metadata = update_metadata_file(model_json, model_dir, model_ext, model_metadata_key, model_metadata_reqs)
 
