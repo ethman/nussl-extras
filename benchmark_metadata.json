@@ -4,8 +4,10 @@
     {
       "date_added": "2018-02-28", 
       "date_modified": "2018-02-28", 
-      "file_description": "example benchmark file",
+      "file_description": "example benchmark file", 
+      "file_hash": "7c2208cd655c0144ea03db15a4af4cf36eaf13364caa59898842140a8ba47f53", 
       "file_name": "benchmark.npy", 
+      "file_size": "11.0B", 
       "for_class": "example"
     }
   ]

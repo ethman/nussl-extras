@@ -30,7 +30,7 @@ def main():
     benchmark_ext = ['npy', 'mat', 'wav']
     benchmark_metadata_key = 'nussl Benchmarks metadata'
     benchmark_metadata_reqs = {'file_description': None, 'date_added': _cur_date, 'date_modified': _cur_date,
-                               'for_class': None}
+                               'for_class': None, 'file_size': _human_readable_file_size, 'file_hash': _hash_file}
 
     benchmark_metadata = update_metadata_file(benchmark_json, benchmark_dir, benchmark_ext,
                                               benchmark_metadata_key, benchmark_metadata_reqs)
