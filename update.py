@@ -5,6 +5,7 @@ import json
 import os
 import hashlib
 import datetime
+import readline
 
 import librosa
 import bs4
@@ -30,7 +31,8 @@ def main():
     benchmark_ext = ['npy', 'mat', 'wav']
     benchmark_metadata_key = 'nussl Benchmarks metadata'
     benchmark_metadata_reqs = {'file_description': None, 'date_added': _cur_date, 'date_modified': _cur_date,
-                               'for_class': None, 'file_size': _human_readable_file_size, 'file_hash': _hash_file}
+                               'for_class': None, 'file_size_bytes': os.path.getsize,
+                               'file_size': _human_readable_file_size, 'file_hash': _hash_file}
 
     benchmark_metadata = update_metadata_file(benchmark_json, benchmark_dir, benchmark_ext,
                                               benchmark_metadata_key, benchmark_metadata_reqs)
@@ -41,7 +43,7 @@ def main():
     model_ext = ['h5', 'hdf5']
     model_metadata_key = 'nussl Models metadata'
     model_metadata_reqs = {'file_description': None, 'date_added': _cur_date, 'date_modified': _cur_date,
-                           'file_size_bytes': os.path.getsize,
+                           'for_class': None, 'file_size_bytes': os.path.getsize,
                            'file_size': _human_readable_file_size, 'file_hash': _hash_file}
 
     model_metadata = update_metadata_file(model_json, model_dir, model_ext, model_metadata_key, model_metadata_reqs)
@@ -153,8 +155,9 @@ def update_metadata_file(metadata_file, assets_folder, allowed_exts, metadata_ke
                     data[field] = metadata_reqs_dict[field](path)
                     print('Fixed {}'.format(field))
                 except:
-                    data[field] = ''
-                    print('\tCan\'t to understand field {}! Skipping...'.format(field))
+                    data[field] = raw_input("Please enter a value for \"{}\": ".format(field))
+                    readline.insert_text("this is a test, can you hit backspace?")
+                    # print('\tCan\'t to understand field {}! Skipping...'.format(field))
 
     # Write metadata file
     metadata_dict = {metadata_key: metadata_dict, 'last_updated': datetime.datetime.now().strftime('%Y-%m-%d')}

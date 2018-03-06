@@ -1,5 +1,5 @@
 {
-  "last_updated": "2018-02-28", 
+  "last_updated": "2018-03-01", 
   "nussl Benchmarks metadata": [
     {
       "date_added": "2018-02-28", 
@@ -9,6 +9,15 @@
       "file_name": "benchmark.npy", 
       "file_size": "11.0B", 
       "for_class": "example"
+    }, 
+    {
+      "date_added": "2018-03-01", 
+      "date_modified": "2018-03-01", 
+      "file_description": "test example", 
+      "file_hash": "88af23881860da0cfe26c822c13efd14e017e16717ffacbd9ef2f70d6dbba3d9", 
+      "file_name": "example.npy", 
+      "file_size": "13.0B", 
+      "for_class": "test"
     }
   ]
 }
