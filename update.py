@@ -40,7 +40,7 @@ def main():
     # ---------- Models ----------
     model_json = 'model_metadata.json'
     model_dir = os.path.join('assets', 'models')
-    model_ext = ['h5', 'hdf5']
+    model_ext = ['h5', 'hdf5', 'model']
     model_metadata_key = 'nussl Models metadata'
     model_metadata_reqs = {'file_description': None, 'date_added': _cur_date, 'date_modified': _cur_date,
                            'for_class': None, 'file_size_bytes': os.path.getsize,
