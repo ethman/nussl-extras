@@ -1,12 +1,12 @@
 {
-  "last_updated": "2018-03-06", 
+  "last_updated": "2018-03-37", 
   "nussl Models metadata": [
     {
       "date_added": "2018-02-27", 
-      "date_modified": "2018-02-27", 
-      "file_description": "example Deep Clustering pytorch model", 
+      "date_modified": "2018-03-27", 
+      "file_description": "example pytorch model", 
       "file_hash": "a75505eececaeaf6d1d62e4b0862e51d5c184945ea64f99b1d59de8b8a6bc2c8", 
-      "file_name": "deep_clustering_model.h5", 
+      "file_name": "example.model", 
       "file_size": "48.1MiB", 
       "file_size_bytes": 50396532, 
       "for_class": "DeepClustering"
@@ -14,7 +14,7 @@
     {
       "date_added": "2018-03-06", 
       "date_modified": "2018-03-06", 
-      "file_description": "trained DC model for vocal extraction", 
+      "file_description": "trained Deep Clustering model for vocal extraction", 
       "file_hash": "2ed27a9d308f785f20750775a0d2b56f6a08476d37d431860532516e041994a0", 
       "file_name": "deep_clustering_vocal_44k_long.model", 
       "file_size": "90.2MiB", 
